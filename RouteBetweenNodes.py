@@ -1,23 +1,21 @@
 """ Given a map as a list of node connections, find whether or not any two nodes are connected """
 
 
-def get_all_links(link_map, node1, visited):
+def does_route_exist(link_map, node1, node2, visited=[]):
     link_list = []
     visited.append(node1)
-    for x,y in link_map:
+    for x, y in link_map:
         if x == node1 and y not in link_list:
             link_list.append(y)
         elif y == node1 and x not in link_list:
             link_list.append(x)
     for node in link_list:
+        if node == node2:
+            return True
         if node not in visited:
-            link_list.extend(get_all_links(link_map, node, visited))
-
-    return link_list
-
-
-def does_route_exist(link_map, node1, node2):
-    return node2 in get_all_links(link_map, node1, [])
+            if does_route_exist(link_map, node, node2, visited):
+                return True
+    return False
 
 
 def main():
