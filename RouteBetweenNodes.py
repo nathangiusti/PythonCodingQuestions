@@ -1,3 +1,6 @@
+""" Given a map as a list of node connections, find whether or not any two nodes are connected """
+
+
 def get_all_links(link_map, node1, visited):
     link_list = []
     visited.append(node1)
