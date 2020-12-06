@@ -13,8 +13,7 @@ def does_route_exist(link_map, node1, node2, visited=[]):
         if node == node2:
             return True
         if node not in visited:
-            if does_route_exist(link_map, node, node2, visited):
-                return True
+            return does_route_exist(link_map, node, node2, visited)
     return False
 
 
