@@ -1,5 +1,6 @@
 
-# Given a collection of meetings (each has a start time and an end time, positive integer type, start time is inclusive and end time is exclusive, input is always valid). Return how many meeting rooms are needed at least to hold all the meetings.
+# Given a collection of meetings (each has a start time and an end time, positive integer type, start time is inclusive and end time is exclusive, input is always valid).
+# Return how many meeting rooms are needed at least to hold all the meetings.
 # [(1,3), (6,8), (4,5)] -> 1
 # ##*******
 # *****##**
